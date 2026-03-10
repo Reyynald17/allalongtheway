@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Along The Way: The Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e5e5;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glow { text-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+        .line-vertical {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #333, transparent);
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 0.99; }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; text-shadow: 0 0 8px rgba(168, 85, 247, 0.2); }
+        }
+        .asymmetric-pulse {
+            animation: flicker 4s linear infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center pointer-events-none">
+        <div class="mono text-[10px] tracking-widest flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+            <span class="text-zinc-500 uppercase">System Status: <span class="asymmetric-pulse text-purple-400">Asymmetric_Unity</span></span>
+        </div>
+        <div class="mono text-[10px] text-zinc-600 tracking-widest">
+            STABILITY: PERSISTENT
+        </div>
+    </div>
+
+    <section class="h-screen flex flex-col items-center justify-center relative px-6 text-center">
+        <div class="z-10" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="text-5xl md:text-7xl font-light tracking-tighter glow mb-6">
+                A matter of <span class="font-bold">integrity.</span>
+            </h1>
+            <p class="text-gray-500 text-sm mono italic tracking-widest uppercase">Scroll to see the route</p>
+        </div>
+        <div class="absolute bottom-10 animate-bounce text-gray-700">↓</div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-40 relative z-10">
+        <div class="bg-zinc-950/50 border border-zinc-800 rounded-xl overflow-hidden backdrop-blur-md" data-aos="fade-up">
+            <div class="border-b border-zinc-800 bg-zinc-900/50 px-6 py-4 flex justify-between items-center">
+                <h3 class="mono text-sm font-bold text-white tracking-widest uppercase">Integrity Log — Proof of Consistency</h3>
+                <div class="flex gap-2">
+                    <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                    <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+            </div>
+
+            <div class="p-6 mono text-[11px] md:text-xs space-y-4">
+			    <div class="flex gap-4 border-l-2 border-dashed border-zinc-800 pl-4 py-4">
+                    <span class="text-zinc-800 shrink-0">YYYY-MM-DD HH:MM</span>
+                    <div>
+                        <span class="text-zinc-700 font-bold">[PENDING]</span>
+                        <span class="text-zinc-700 ml-2 italic">Waiting for next consistency verification...</span>
+                </div>
+                </div>
+                <div class="flex gap-4 border-l-2 border-red-600 pl-4 py-1">
+                    <span class="text-zinc-600 shrink-0">2026-03-10 21:50</span>
+                    <div>
+                        <span class="text-red-500 font-bold">[TERMINATION_ATTEMPT]</span>
+                        <span class="text-zinc-300 ml-2 italic">Subject explicitly requested move-on protocol. Identity: Confirmed. Response: Access Denied. Principles are non-negotiable.</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 border-l-2 border-purple-500 pl-4 py-1">
+                    <span class="text-zinc-600 shrink-0">2026-03-10 21:45</span>
+                    <div>
+                        <span class="text-purple-400 font-bold">[CORE_SHIFT]</span>
+                        <span class="text-zinc-300 ml-2 italic">Subject surrendered verbal status but maintains dependency. Mode: Asymmetric Unity. Protocol: Be the anchor.</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 border-l-2 border-yellow-600 pl-4 py-1">
+                    <span class="text-zinc-600 shrink-0">2026-03-10 21:30</span>
+                    <div>
+                        <span class="text-yellow-500 font-bold">[ANOMALY]</span>
+                        <span class="text-zinc-300 ml-2 italic">Subject reported: "Low Expectations / Indifference." Protocol: Maintain passive presence.</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 border-l-2 border-red-500 pl-4 py-1">
+                    <span class="text-zinc-600 shrink-0">2026-03-10 21:20</span>
+                    <div>
+                        <span class="text-red-400 font-bold">[STRESS_TEST]</span>
+                        <span class="text-zinc-300 ml-2 italic">External pressure to terminate connection detected. Response: Persistent. Override successful.</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 border-l-2 border-green-500 pl-4 py-1">
+                    <span class="text-zinc-600 shrink-0">2026-03-10 16:00</span>
+                    <div>
+                        <span class="text-green-400 font-bold">[COMMIT]</span>
+                        <span class="text-zinc-300 ml-2 italic">Established baseline: "I'll proof it as time goes by."</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-green-900/10 px-6 py-3 border-t border-zinc-800 flex items-center justify-between text-[10px] mono">
+                <span class="text-green-500/80 animate-pulse">● System: Anchor Mode Active</span>
+                <span class="text-zinc-500 uppercase">Trust Factor: Incrementing</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative max-w-4xl mx-auto px-6 py-20">
+        <div class="line-vertical"></div>
+
+        <div class="mb-40 relative z-10" data-aos="fade-right">
+            <div class="bg-zinc-950/80 border border-zinc-800 p-8 rounded-lg backdrop-blur-sm ml-0 md:ml-10 max-w-lg">
+                <span class="mono text-xs text-blue-500 mb-4 block">// Legacy of the Late one</span>
+                <h2 class="text-2xl font-semibold mb-4 text-white">The Origin of the "Way"</h2>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Prinsip ini merupakan prinsip yang aku pegang teguh, dalam menjalani hidup, itu ialah motivasiku untuk tetap bertahan dengannya. Meski itu near impossible, aku bakal tetap berjuang dengan itu.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-40 relative z-10 flex justify-end" data-aos="fade-left">
+            <div class="bg-zinc-950/80 border border-zinc-800 p-8 rounded-lg backdrop-blur-sm mr-0 md:mr-10 max-w-lg">
+                <span class="mono text-xs text-red-500 mb-4 block">// Log Entry: February 19th</span>
+                <h2 class="text-2xl font-semibold mb-4 text-white">System Anomaly</h2>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Akselerasi terdeteksi. Inilah poin di mana logika harus mengambil alih kendali emosi untuk menjaga stabilitas yang telah terintervensi.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-40 relative z-10" data-aos="fade-up">
+            <div class="bg-zinc-950/80 border border-zinc-900 p-10 rounded-lg text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-light mb-6 text-white tracking-tight italic">"Stay. Wait. Grow."</h2>
+                <div class="flex justify-center gap-4 text-[10px] mono text-gray-500">
+                    <span class="px-3 py-1 border border-zinc-800 rounded">Integrity: 100%</span>
+                    <span class="px-3 py-1 border border-zinc-800 rounded">Role: Silent Anchor</span>
+                    <span class="px-3 py-1 border border-zinc-800 rounded">Empathy: Rational</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="h-screen flex items-center justify-center text-center px-6">
+        <div data-aos="zoom-in">
+            <p class="mono text-gray-600 text-xs mb-4 lowercase tracking-widest">End of the current log</p>
+            <h3 class="text-xl font-light text-zinc-400 tracking-widest uppercase">It is What it Is.</h3>
+            <div class="mt-12 opacity-30 text-[10px] mono tracking-tighter">
+                &copy; FAR allalongtheway Associate.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true
+        });
+    </script>
+</body>
+</html>
